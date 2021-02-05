@@ -1,15 +1,29 @@
 <template>
 	<div>
 		<b-navbar toggleable="lg" type="dark" variant="info">
-			<b-navbar-brand href="#">Eventify</b-navbar-brand>
+			<router-link to="/" class="navbar-brand">Eventify</router-link>
 
 			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
 			<b-collapse id="nav-collapse" is-nav>
 				<b-navbar-nav>
-					<b-nav-item href="#">Home</b-nav-item>
-					<b-nav-item href="#">Event</b-nav-item>
-					<b-nav-item href="#">Back Office</b-nav-item>
+					<router-link
+						to="/"
+						activeClass="active"
+						class="mr-4"
+						tag="li"
+						><a>Home</a></router-link
+					>
+					<router-link
+						to="/event"
+						activeClass="active"
+						class="mr-4"
+						tag="li"
+						><a>Event</a></router-link
+					>
+					<router-link to="/office" activeClass="active" tag="li"
+						><a>Office</a></router-link
+					>
 					<!-- <b-nav-item href="#" disabled>Disabled</b-nav-item> -->
 				</b-navbar-nav>
 
