@@ -14,12 +14,12 @@
 						tag="li"
 						><a>Home</a></router-link
 					>
-					<router-link
+					<!-- <router-link
 						to="/event"
 						activeClass="active"
 						class="mr-4"
 						tag="li"
-						><a>Event</a></router-link
+						><a>Event</a></router-link -->
 					>
 					<router-link to="/office" activeClass="active" tag="li"
 						><a>Office</a></router-link
