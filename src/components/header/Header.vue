@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<b-navbar toggleable="lg" type="dark" variant="info">
+		<b-navbar toggleable="lg" type="dark" variant="dark">
 			<router-link to="/" class="navbar-brand">Eventify</router-link>
 
 			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -27,7 +27,6 @@
 					<!-- <b-nav-item href="#" disabled>Disabled</b-nav-item> -->
 				</b-navbar-nav>
 
-				<!-- Right aligned nav items -->
 				<b-navbar-nav class="ml-auto">
 					<b-nav-form>
 						<b-form-input
@@ -35,7 +34,7 @@
 							class="mr-sm-2"
 							placeholder="Search event"
 						></b-form-input>
-						<b-button size="sm" class="my-2 my-sm-0" type="submit"
+						<b-button size="sm" class="my-2 my-sm-0" type="button"
 							>Search</b-button
 						>
 					</b-nav-form>
