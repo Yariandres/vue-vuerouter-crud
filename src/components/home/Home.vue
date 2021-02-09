@@ -21,7 +21,10 @@
 						make up the bulk of the card's content.
 					</b-card-text>
 
-					<router-link to="/event" variant="primary"
+					<router-link
+						to="/event"
+						variant="primary"
+						class="btn btn-primary"
 						>View event</router-link
 					>
 					<template #footer>
@@ -44,7 +47,7 @@
 						make up the bulk of the card's content.
 					</b-card-text>
 
-					<router-link to="/event" variant="primary"
+					<router-link to="/event" class="btn btn-primary"
 						>View event</router-link
 					>
 					<template #footer>
