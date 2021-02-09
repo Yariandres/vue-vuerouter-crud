@@ -22,12 +22,20 @@
 								natural lead-in to additional content. This
 								content is a little bit longer.
 							</b-card-text>
+
+							<router-link
+								to="/office"
+								variant="primary"
+								class="text-center btn btn-info btn-sm"
+								>Edit event</router-link
+							>
 						</b-card-body>
+
 						<b-list-group flush>
 							<b-list-group-item
 								><span class="font-weight-bold">Price:</span>
-								$20</b-list-group-item
-							>
+								$20
+							</b-list-group-item>
 						</b-list-group>
 					</b-col>
 				</b-row>
