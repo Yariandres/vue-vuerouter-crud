@@ -21,11 +21,12 @@
 					</b-card-text>
 
 					<router-link
-						to="/event"
+						:to="/event/ + event.id"
 						variant="primary"
 						class="btn btn-primary"
 						>View event</router-link
 					>
+
 					<template #footer>
 						<em>Pirce: ${{ event.price }}</em>
 					</template>
@@ -44,6 +45,7 @@
 				events: [],
 			};
 		},
+
 		created() {
 			let config = {
 				headers: {
@@ -53,7 +55,7 @@
 			axios
 				.get('http://localhost:3000/events', config)
 				.then(response => (this.events = response.data))
-				.then(() => console.log(this.events))
+				// .then(() => console.log(this.events))
 				.catch(err => console.log(err));
 		},
 	};
