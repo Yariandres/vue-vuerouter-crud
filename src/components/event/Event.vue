@@ -1,9 +1,6 @@
 <template>
 	<b-container>
-		<div class="mt-5">
-			<b-jumbotron header="Event Details" class="text-center">
-			</b-jumbotron>
-		</div>
+		<b-jumbotron header="Event Details" class="text-center"> </b-jumbotron>
 
 		<div class="d-flex justify-content-center">
 			<b-card no-body class="overflow-hidden" style="max-width: 540px;">
@@ -27,7 +24,10 @@
 								>Edit event</router-link
 							>
 
-							<b-button variant="danger" class="btn-sm ml-3"
+							<b-button
+								variant="danger"
+								class="btn-sm ml-3"
+								@click="deleteEvent"
 								>Delete</b-button
 							>
 						</b-card-body>
@@ -67,6 +67,21 @@
 				.then(response => (this.event = response.data))
 				.then(() => console.log(this.event))
 				.catch(err => console.log(err));
+		},
+
+		methods: {
+			deleteEvent() {
+				let id = this.$route.params.eventId;
+				axios
+					.delete('http://localhost:3000/events/' + id)
+					.then(response => {
+						console.log(response);
+					})
+					.then(() => {
+						this.$router.push('/');
+					})
+					.catch(error => console.log(error));
+			},
 		},
 	};
 </script>
