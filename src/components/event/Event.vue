@@ -18,7 +18,7 @@
 							</b-card-text>
 
 							<router-link
-								to="/office"
+								:to="{ name: 'Office', params: { eventId } }"
 								variant="primary"
 								class="text-center btn btn-info btn-sm"
 								>Edit event</router-link
@@ -51,6 +51,7 @@
 		data() {
 			return {
 				event: [],
+				eventId: this.$route.params.eventId,
 			};
 		},
 
@@ -60,7 +61,6 @@
 			axios
 				.get('http://localhost:3000/events/' + id)
 				.then(response => (this.event = response.data))
-				.then(() => console.log(this.event))
 				.catch(err => console.log(err));
 		},
 
@@ -69,9 +69,6 @@
 				let id = this.$route.params.eventId;
 				axios
 					.delete('http://localhost:3000/events/' + id)
-					.then(response => {
-						console.log(response);
-					})
 					.then(() => {
 						this.$router.push('/');
 					})

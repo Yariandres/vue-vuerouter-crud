@@ -65,7 +65,7 @@
 </template>
 
 <script>
-	// import axios from 'axios';
+	import axios from 'axios';
 
 	export default {
 		name: 'Office',
@@ -86,10 +86,37 @@
 		methods: {
 			onSubmit(event) {
 				event.preventDefault();
+
+				if (this.eventId) {
+					axios
+						.put('http://localhost:3000/events/' + this.eventId, {
+							id: Math.floor(Math.random() * Math.floor(10000)),
+							image: `https://picsum.photos/600/300/?image=${Math.floor(
+								Math.random() * Math.floor(20),
+							)}`,
+							title: this.form.title,
+							description: this.form.desc,
+							price: this.form.price,
+						})
+						.then(() => this.$router.push('/'))
+						.catch(err => console.log(err));
+				} else {
+					axios
+						.post('http://localhost:3000/events', {
+							id: Math.floor(Math.random() * Math.floor(10000)),
+							image: `https://picsum.photos/600/300/?image=${Math.floor(
+								Math.random() * Math.floor(20),
+							)}`,
+							title: this.form.title,
+							description: this.form.desc,
+							price: this.form.price,
+						})
+						.then(() => this.$router.push('/'))
+						.catch(err => console.log(err));
+				}
 			},
 			onReset(event) {
 				event.preventDefault();
-				// Reset our form values
 				this.form.title = '';
 				this.form.desc = '';
 				this.form.price = null;
@@ -98,7 +125,14 @@
 
 		mounted() {
 			if (this.eventId) {
-				this.id = this.this.eventId;
+				axios
+					.get('http://localhost:3000/events/' + this.eventId)
+					.then(response => {
+						this.form.title = response.data.title;
+						this.form.desc = response.data.description;
+						this.form.price = response.data.price;
+					})
+					.catch(err => console.log(err));
 			}
 		},
 	};
