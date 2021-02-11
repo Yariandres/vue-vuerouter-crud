@@ -1,13 +1,6 @@
 {
   "events": [
     {
-      "id": 3,
-      "image": "https://picsum.photos/600/300/?image=22",
-      "title": "Some quick example",
-      "description": "Text to build on the event description and make up the bulk of the card's content.",
-      "price": 29
-    },
-    {
       "id": 4,
       "image": "https://picsum.photos/600/300/?image=23",
       "title": "Some quick example",
@@ -23,10 +16,10 @@
     },
     {
       "id": 6,
-      "image": "https://picsum.photos/600/300/?image=25",
-      "title": "Some quick example",
-      "description": "Text to build on the event description and make up the bulk of the card's content.",
-      "price": 100
+      "image": "https://picsum.photos/600/300/?image=6",
+      "title": "The coders meeting Poland",
+      "description": "A secret javascript meeting for the elite developers form the eastern",
+      "price": "10"
     },
     {
       "id": 7,
@@ -37,10 +30,24 @@
     },
     {
       "id": 8,
-      "image": "https://picsum.photos/600/300/?image=27",
-      "title": "Some quick example",
-      "description": "Text to build on the event description and make up the bulk of the card's content.",
-      "price": 20
+      "image": "https://picsum.photos/600/300/?image=0",
+      "title": "Some EDITED title",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat illo iste, facere reiciendis aspernatur voluptatum, facilis, eos dolores aliquid debitis adipisci aut consectetur!",
+      "price": "99"
+    },
+    {
+      "id": 8745,
+      "image": "https://picsum.photos/600/300/?image=2",
+      "title": "This is a newly created event...",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veritatis voluptatum repellendus reiciendis reprehenderit iste accusamus eligendi nobis.",
+      "price": "200"
+    },
+    {
+      "id": 1568,
+      "image": "https://picsum.photos/600/300/?image=12",
+      "title": "Anti Java manifest ",
+      "description": "A meeting to discuss the Java development of the future",
+      "price": "22"
     }
   ]
 }
