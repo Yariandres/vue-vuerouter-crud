@@ -65,36 +65,41 @@
 </template>
 
 <script>
+	// import axios from 'axios';
+
 	export default {
+		name: 'Office',
+		props: ['eventId'],
 		data() {
 			return {
 				form: {
 					title: '',
 					desc: '',
 					price: null,
+					id: '',
 				},
 
 				show: true,
 			};
 		},
+
 		methods: {
 			onSubmit(event) {
 				event.preventDefault();
-				alert(JSON.stringify(this.form));
 			},
 			onReset(event) {
 				event.preventDefault();
 				// Reset our form values
-				this.form.email = '';
-				this.form.name = '';
-				this.form.food = null;
-				this.form.checked = [];
-				// Trick to reset/clear native browser form validation state
-				this.show = false;
-				this.$nextTick(() => {
-					this.show = true;
-				});
+				this.form.title = '';
+				this.form.desc = '';
+				this.form.price = null;
 			},
+		},
+
+		mounted() {
+			if (this.eventId) {
+				this.id = this.this.eventId;
+			}
 		},
 	};
 </script>

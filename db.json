@@ -41,13 +41,6 @@
       "title": "Some quick example",
       "description": "Text to build on the event description and make up the bulk of the card's content.",
       "price": 20
-    },
-    {
-      "id": 9,
-      "image": "https://picsum.photos/600/300/?image=28",
-      "title": "Some quick example",
-      "description": "Text to build on the event description and make up the bulk of the card's content.",
-      "price": 22
     }
   ]
 }

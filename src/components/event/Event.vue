@@ -57,13 +57,8 @@
 		created() {
 			let id = this.$route.params.eventId;
 
-			let config = {
-				headers: {
-					'Accept': 'application/json',
-				},
-			};
 			axios
-				.get('http://localhost:3000/events/' + id, config)
+				.get('http://localhost:3000/events/' + id)
 				.then(response => (this.event = response.data))
 				.then(() => console.log(this.event))
 				.catch(err => console.log(err));
